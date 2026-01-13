@@ -300,3 +300,543 @@ footer {
     font-size: 28px;
   }
 }
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+/* =========================
+   COLLEGES PAGE
+========================= */
+
+.page-header {
+  max-width: 1200px;
+  margin: 50px auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+/* Filters */
+.college-filters {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 20px;
+}
+
+.college-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.college-card h3 {
+  color: #111827;
+}
+
+.college-meta {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.college-card .btn {
+  margin-top: auto;
+  text-align: center;
+}
