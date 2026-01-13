@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Admissions Assistant - MBAIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MBAIntel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="roi-careers.html">ROI Calculator</a></li>
+                <li><a href="chatbot.html">AI Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Hero -->
+        <div class="page-hero">
+            <h1>AI Admissions Assistant</h1>
+            <p>Have a conversation with our AI assistant. Share your percentile, budget, and preferences to get personalized college recommendations.</p>
+        </div>
+
+        <section class="section">
+            <div class="chatbot-container">
+                <div class="chatbot-messages" id="chatMessages">
+                    <div class="message bot">
+                        <p>👋 Hello! I'm your AI Admissions Assistant. I can help you find the perfect MBA college!</p>
+                        <p style="margin-top: 0.5rem;">Tell me about yourself - your percentile, exam, budget, and preferences. I'll remember this information throughout our conversation.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Example:</strong> "Hey! I scored 95 percentile in CAT and my budget is 15 lakhs. Which colleges should I consider?"</p>
+                    </div>
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" id="chatInput" placeholder="Type your message here... (e.g., 'Hey! I scored 95%ile in CAT, budget 15L')" onkeypress="if(event.key === 'Enter') sendMessage()">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/colleges.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
