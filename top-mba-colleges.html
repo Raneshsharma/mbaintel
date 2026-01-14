@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 MBA Colleges by State - MBAIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MBAIntel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="compare.html">Compare Colleges</a></li>
+                <li><a href="roi-careers.html">ROI Calculator</a></li>
+                <li><a href="chatbot.html">AI Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-hero">
+            <h1>Top 10 MBA Colleges in India</h1>
+            <p>Select a state to explore curated lists of top MBA colleges. Each college has its own detail page with programs, fees, placements, and batch profile.</p>
+        </div>
+
+        <section class="section">
+            <div class="grid grid-3" id="stateGrid"></div>
+        </section>
+
+        <section class="section" id="stateSection" style="display:none;">
+            <h2 id="stateTitle"></h2>
+            <p id="stateDescription" style="max-width: 700px; color: var(--slate-600); margin-bottom: 2rem;"></p>
+            <div class="college-list" id="stateCollegeList"></div>
+        </section>
+    </div>
+
+    <script src="js/top-mba-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof topMbaStates === 'undefined') return;
+
+            var stateGrid = document.getElementById('stateGrid');
+            var stateSection = document.getElementById('stateSection');
+            var stateTitle = document.getElementById('stateTitle');
+            var stateDescription = document.getElementById('stateDescription');
+            var stateCollegeList = document.getElementById('stateCollegeList');
+
+            function renderStates() {
+                topMbaStates.forEach(function (state) {
+                    var card = document.createElement('div');
+                    card.className = 'card';
+                    card.style.cursor = 'pointer';
+
+                    var title = document.createElement('h3');
+                    title.textContent = state.name;
+                    card.appendChild(title);
+
+                    var desc = document.createElement('p');
+                    desc.textContent = state.description;
+                    card.appendChild(desc);
+
+                    var btn = document.createElement('div');
+                    btn.className = 'feature-link';
+                    btn.textContent = 'View Top 10 →';
+                    card.appendChild(btn);
+
+                    card.addEventListener('click', function () {
+                        renderState(state.id);
+                        window.scrollTo({ top: stateSection.offsetTop - 80, behavior: 'smooth' });
+                    });
+
+                    stateGrid.appendChild(card);
+                });
+            }
+
+            function renderState(stateId) {
+                var state = topMbaStates.find(function (s) { return s.id === stateId; });
+                if (!state) return;
+
+                stateTitle.textContent = 'Top MBA Colleges in ' + state.name;
+                stateDescription.textContent = state.description;
+                stateCollegeList.innerHTML = '';
+
+                state.colleges.forEach(function (college, index) {
+                    if (index >= 10) return;
+
+                    var card = document.createElement('div');
+                    card.className = 'college-card';
+
+                    var header = document.createElement('div');
+                    header.className = 'college-header';
+
+                    var name = document.createElement('div');
+                    name.className = 'college-name';
+                    name.textContent = college.name;
+                    header.appendChild(name);
+
+                    var badge = document.createElement('span');
+                    badge.className = 'tier-badge tier-1';
+                    badge.textContent = 'Top ' + (index + 1);
+                    header.appendChild(badge);
+
+                    card.appendChild(header);
+
+                    var details = document.createElement('div');
+                    details.className = 'college-details';
+
+                    var items = [
+                        { label: 'City', value: college.city },
+                        { label: 'Flagship Program', value: college.flagshipProgram },
+                        { label: 'Average CTC', value: college.avgCtc },
+                        { label: 'Fees (Approx.)', value: college.fees }
+                    ];
+
+                    items.forEach(function (item) {
+                        var detailItem = document.createElement('div');
+                        detailItem.className = 'detail-item';
+
+                        var dl = document.createElement('div');
+                        dl.className = 'detail-label';
+                        dl.textContent = item.label;
+                        detailItem.appendChild(dl);
+
+                        var dv = document.createElement('div');
+                        dv.className = 'detail-value';
+                        dv.textContent = item.value;
+                        detailItem.appendChild(dv);
+
+                        details.appendChild(detailItem);
+                    });
+
+                    card.appendChild(details);
+
+                    var ctaWrapper = document.createElement('div');
+                    ctaWrapper.style.marginTop = '1.5rem';
+
+                    var link = document.createElement('a');
+                    link.href = 'college.html?state=' + encodeURIComponent(state.id) + '&college=' + encodeURIComponent(college.id);
+                    link.className = 'btn btn-primary';
+                    link.textContent = 'View College Profile';
+
+                    ctaWrapper.appendChild(link);
+                    card.appendChild(ctaWrapper);
+
+                    stateCollegeList.appendChild(card);
+                });
+
+                stateSection.style.display = 'block';
+            }
+
+            renderStates();
+        });
+    </script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
+

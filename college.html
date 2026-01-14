@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Profile - MBAIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MBAIntel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="compare.html">Compare Colleges</a></li>
+                <li><a href="roi-careers.html">ROI Calculator</a></li>
+                <li><a href="chatbot.html">AI Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-hero">
+            <h1 id="collegeName">College Name</h1>
+            <p id="collegeTagline">Detailed profile of the MBA program, placements, and campus experience.</p>
+        </div>
+
+        <section class="section">
+            <div class="grid grid-2">
+                <div class="card">
+                    <div id="collegeVisual" class="college-visual-card">
+                        <div class="college-visual-top">
+                            <span class="college-visual-pill">Campus Snapshot</span>
+                        </div>
+                        <div class="college-visual-main">
+                            <div class="college-visual-logo">
+                                <img id="collegeLogo" class="college-logo-img" alt="College logo" />
+                                <div class="college-visual-initials" id="collegeInitials">MBA</div>
+                            </div>
+                            <div class="college-visual-text">
+                                <div class="college-visual-name" id="collegeVisualName">College Name</div>
+                                <div class="college-visual-subtitle" id="collegeVisualSubtitle">Location • University</div>
+                            </div>
+                        </div>
+                        <div class="college-visual-meta" id="collegeVisualMeta">
+                            <div class="college-visual-chip">
+                                <span class="chip-label">Established</span>
+                                <span class="chip-value" id="collegeEstablished">—</span>
+                            </div>
+                            <div class="college-visual-chip">
+                                <span class="chip-label">Avg CTC</span>
+                                <span class="chip-value" id="collegeVisualCtc">—</span>
+                            </div>
+                            <div class="college-visual-chip">
+                                <span class="chip-label">Program</span>
+                                <span class="chip-value" id="collegeVisualProgram">MBA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <h2>Quick Facts</h2>
+                        <div class="college-details" id="quickFacts"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Flagship MBA Program</h2>
+                    <p id="flagshipProgram"></p>
+                    <h3 style="margin-top: 1.5rem;">Why this college stands out</h3>
+                    <ul id="highlightsList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                    <h3 style="margin-top: 1.5rem;">Program structure at a glance</h3>
+                    <ul id="programStructureList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                    <h3 style="margin-top: 1.5rem;">Key specialisations and career tracks</h3>
+                    <ul id="specialisationsList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h2>Programs and Curriculum</h2>
+                    <p id="programsText"></p>
+                    <h3 style="margin-top: 1.5rem;">Core course themes</h3>
+                    <ul id="coreCoursesList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                    <h3 style="margin-top: 1.5rem;">Teaching and evaluation style</h3>
+                    <ul id="pedagogyList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                    <h3 style="margin-top: 1.5rem;">Experiential learning</h3>
+                    <ul id="experientialList" style="margin-left: 1.25rem; margin-top: 0.5rem;"></ul>
+                </div>
+                <div class="card">
+                    <h2>Batch Size and Profile</h2>
+                    <p id="batchProfileText"></p>
+                    <div id="batchDiversityContainer"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h2>Admissions &amp; Eligibility</h2>
+                    <p id="admissionsText"></p>
+                </div>
+                <div class="card">
+                    <h2>Fees &amp; ROI Perspective</h2>
+                    <p id="feesRoiText"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid grid-2">
+                <div class="card">
+                    <h2>Placements Overview</h2>
+                    <p id="placementsText"></p>
+                </div>
+                <div class="card">
+                    <h2>Rankings &amp; Accreditations</h2>
+                    <p id="rankingText"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2>Entrance Exams &amp; Expected Cut-offs</h2>
+                <div class="comparison-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Exam</th>
+                                <th>Category</th>
+                                <th>Typical Overall Percentile Range</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cutoffTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="card">
+                <h2>Campus &amp; Facilities</h2>
+                <p id="campusText"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/top-mba-data.js"></script>
+    <script>
+        var extendedProfiles = {
+            'fms-delhi': {
+                yearEstablished: '1954',
+                instituteType: 'Public; department of the University of Delhi',
+                programDuration: '2 years, full-time (4 semesters)',
+                entranceExams: 'CAT (Common Admission Test)',
+                logoUrl: 'images/fms-logo.png',
+                flagshipProgramText: 'The flagship MBA at FMS Delhi is a two-year full-time program with a strong grounding in economics, quantitative methods, and core management subjects in the first year, followed by a wide range of electives in areas such as marketing, finance, strategy, operations, IT, and analytics. Classroom learning is heavily case-based and complemented by live projects, simulations, and corporate sessions.',
+                curriculumCore: [
+                    'Core courses in accounting, corporate finance, marketing management, organisational behaviour, operations, and strategy.',
+                    'Quantitative techniques, business statistics, and data analysis for decision-making.',
+                    'Macro and micro economics, business communication, and business ethics.'
+                ],
+                curriculumPedagogy: [
+                    'Case-based teaching using Indian and global business cases.',
+                    'Classroom discussions, simulations, and role-plays led by faculty and industry speakers.',
+                    'Continuous evaluation through quizzes, projects, presentations, and term exams.'
+                ],
+                curriculumExperiential: [
+                    'Summer internship across consulting, BFSI, FMCG, technology, and start-ups.',
+                    'Live projects and competitions conducted in collaboration with recruiters and alumni.',
+                    'Student-run clubs and committees that organise conclaves, workshops, and industry talks.'
+                ],
+                programStructure: [
+                    'Year 1 focuses on core courses across marketing, finance, operations, organisational behaviour, economics, and quantitative techniques.',
+                    'An 8–10 week summer internship between the first and second year provides exposure to live corporate projects.',
+                    'Year 2 is largely elective-driven, allowing students to build depth in chosen areas such as marketing, finance, consulting, analytics, and general management.',
+                    'Regular workshops, conclaves, and guest lectures help connect classroom concepts with current industry practice.'
+                ],
+                keySpecialisations: [
+                    'Marketing and brand management',
+                    'Corporate finance, investment banking, and financial markets',
+                    'Strategy and management consulting',
+                    'Operations and supply chain management',
+                    'Business analytics, IT, and product roles',
+                    'General management and leadership tracks'
+                ],
+                programsText: 'FMS Delhi offers a rigorous two-year full-time MBA housed within the Delhi School of Economics. The curriculum starts with a strong foundation in economics, quantitative methods, and core management subjects, followed by specialised electives in areas such as marketing, finance, strategy, operations, IT and analytics. Classroom learning is consistently linked with live projects, case discussions, and industry interactions, so students are exposed to both conceptual depth and real business problems early in the program.',
+                admissionsText: 'Admission to the flagship MBA at FMS Delhi is based on CAT scores followed by a multi-stage evaluation process. Shortlisting takes into account CAT section-wise performance along with weightage for past academics. The final selection typically considers 10th and 12th marks, CAT performance, a discussion on a Statement of Purpose, an extempore round, and a personal interview. The process is highly competitive, with cut-offs usually in the high 90s percentile range and a limited number of seats relative to the applicant pool.',
+                feesRoiText: 'One of the biggest strengths of FMS Delhi is its exceptional return on investment. The total academic fee for the full two-year MBA is around ₹2.4 lakh, which is significantly lower than most top Indian B-schools. When this modest fee is compared with recent average salary figures in the mid-₹30 LPA range, FMS consistently emerges as one of the best-value management programs in the country for aspirants focused on ROI.',
+                placementsText: 'Recent final placement seasons at FMS Delhi have seen 100% placements with strong representation from consulting, BFSI, technology, and FMCG firms. Average packages have been reported in the ₹34 LPA range, with domestic highs crossing the ₹1 crore mark in some years. A large share of offers comes from top consulting and strategy roles, alongside product management, leadership tracks, and high-impact finance positions offered by marquee recruiters.',
+                rankingText: 'FMS Delhi is widely recognised as a top-tier Indian B-school. It has been ranked among the top 10 MBA institutes in multiple national rankings and consistently features just behind the leading IIMs on most lists. As a department of the University of Delhi, FMS also benefits from NAAC accreditation at the university level and recognition from national regulatory bodies, reinforcing its academic credibility.',
+                campusText: 'The institute is located in the North Campus of the University of Delhi, giving students access to a vibrant academic and cultural environment. While the dedicated FMS infrastructure focuses on classrooms and seminar spaces optimised for case discussions, students also benefit from the larger DU ecosystem – central libraries, sports facilities, auditoriums, and student clubs. The campus experience is shaped by student-run committees, academic conclaves, and corporate events held throughout the year.',
+                batchProfileText: 'The MBA batch at FMS Delhi generally comprises around 250 students with a sanctioned intake plus supernumerary seats. The classroom mix includes fresh graduates as well as professionals with 1–4 years of experience across IT, consulting, manufacturing, BFSI, and start-ups. Academic backgrounds are diverse, combining engineers, commerce and economics graduates, and students from other disciplines, which keeps peer learning intense and multi-dimensional.',
+                batchDiversity: {
+                    malePercent: '70%',
+                    femalePercent: '30%',
+                    averageAge: '23–24 years',
+                    backgroundSplit: [
+                        { domain: 'Engineering/Technology', percent: '≈ 65%' },
+                        { domain: 'Commerce & Management', percent: '≈ 20%' },
+                        { domain: 'Economics/Arts/Humanities', percent: '≈ 10%' },
+                        { domain: 'Others (Science, Law, etc.)', percent: '≈ 5%' }
+                    ],
+                    experienceSplit: [
+                        { band: 'Freshers (0 years)', percent: '≈ 40%' },
+                        { band: '1–2 years of experience', percent: '≈ 35%' },
+                        { band: '2–4 years of experience', percent: '≈ 20%' },
+                        { band: '4+ years of experience', percent: '≈ 5%' }
+                    ],
+                    regionSplit: [
+                        { region: 'North India', percent: '≈ 45%' },
+                        { region: 'West India', percent: '≈ 20%' },
+                        { region: 'South India', percent: '≈ 20%' },
+                        { region: 'East and North-East India', percent: '≈ 15%' }
+                    ]
+                },
+                topRecruiters: [
+                    'McKinsey & Company',
+                    'Boston Consulting Group (BCG)',
+                    'Bain & Company',
+                    'Amazon',
+                    'Hindustan Unilever (HUL)',
+                    'Deloitte',
+                    'J.P. Morgan Chase'
+                ],
+                cutoffs: {
+                    note: 'Values below are indicative overall CAT percentile ranges based on recent admission trends. Official cut-offs are released by the institute each year.',
+                    rows: [
+                        { exam: 'CAT', category: 'General (UR)', range: '98–99 percentile (overall)' },
+                        { exam: 'CAT', category: 'EWS', range: '96–98 percentile (overall)' },
+                        { exam: 'CAT', category: 'OBC-NCL', range: '90–93 percentile (overall)' },
+                        { exam: 'CAT', category: 'SC', range: '80–85 percentile (overall)' },
+                        { exam: 'CAT', category: 'ST', range: '70–75 percentile (overall)' },
+                        { exam: 'CAT', category: 'PwD', range: 'Around 70 percentile and above (overall)' }
+                    ]
+                }
+            },
+            'mdi-gurgaon': {
+                yearEstablished: '1972',
+                instituteType: 'Private autonomous B-school with AACSB and AMBA accreditations',
+                programDuration: '2 years, full-time (trimester system)',
+                entranceExams: 'CAT (primary); GMAT/XAT considered for some international candidates',
+                logoUrl: 'images/mdi-gurgaon-logo.png',
+                flagshipProgramText: 'The flagship PGDM at MDI Gurgaon is a two-year residential program designed around a rigorous trimester structure, strong industry connect, and a wide choice of electives in the second year.',
+                programsText: 'MDI Gurgaon offers AICTE-approved, MBA-equivalent PGDM programs with specialisations in marketing, finance, operations, HR, IB, and business analytics. The first year focuses on building strong foundations in all functional areas, while the second year lets students customise their portfolio of electives and sectoral courses.',
+                admissionsText: 'Admission to MDI Gurgaon\u2019s flagship PGDM programs is based on CAT scores followed by a shortlisting for group discussion, personal interview, and written analysis. Shortlists typically favour high CAT percentiles, consistent academics, and relevant work experience. Final selection considers CAT, past academics, work experience, and performance in GD-PI-WAT.',
+                feesRoiText: 'Program fees are in the ₹24\u201326 lakh range for the full course. With recent average CTCs around the mid-₹20 LPA band, MDI Gurgaon offers a strong value proposition among private top-tier B-schools, especially for candidates targeting consulting, general management, and marketing roles in the NCR and beyond.',
+                placementsText: 'Final placements at MDI Gurgaon consistently see 100% placement with participation from marquee consulting firms, large banks, conglomerates, FMCG majors, and technology companies. Recent batches have reported average CTCs around ₹25\u201327 LPA with a healthy mix of consulting, general management, marketing, product, and analytics roles.',
+                rankingText: 'MDI Gurgaon is regularly ranked among the top 10 B-schools in India and is often counted just below the older IIMs. International accreditations from AMBA and AACSB, along with strong rankings in national surveys, reinforce its position as a premier private management institute.',
+                campusText: 'The 37-acre MDI campus in Gurgaon is located close to major corporate headquarters. It offers academic blocks, a well-stocked library, hostels, sports facilities, and multiple student-run clubs and committees that organise conclaves, festivals, and industry interactions throughout the year.',
+                batchProfileText: 'The PGDM batch at MDI Gurgaon usually comprises 350+ students across flagship programs. The class mix includes candidates with experience in IT services, consulting, manufacturing, BFSI, start-ups, and analytics, alongside high-performing fresh graduates from engineering, commerce, and economics backgrounds.',
+                batchDiversity: {
+                    malePercent: '65%',
+                    femalePercent: '35%',
+                    averageAge: '24\u201325 years',
+                    backgroundSplit: [
+                        { domain: 'Engineering/Technology', percent: '≈ 60%' },
+                        { domain: 'Commerce & Management', percent: '≈ 20%' },
+                        { domain: 'Economics/Arts/Humanities', percent: '≈ 10%' },
+                        { domain: 'Others (Science, etc.)', percent: '≈ 10%' }
+                    ]
+                },
+                topRecruiters: [
+                    'McKinsey & Company',
+                    'Boston Consulting Group (BCG)',
+                    'Bain & Company',
+                    'Deloitte',
+                    'EY',
+                    'HUL',
+                    'Amazon'
+                ],
+                cutoffs: {
+                    note: 'Indicative CAT percentile ranges; actual shortlists are published by MDI each admission year.',
+                    rows: [
+                        { exam: 'CAT', category: 'General (UR)', range: '95\u201397 percentile (overall)' },
+                        { exam: 'CAT', category: 'Other categories / profile-based', range: 'Slightly lower with strong profile' }
+                    ]
+                }
+            },
+            'iift-delhi': {
+                yearEstablished: '1963',
+                instituteType: 'Deemed-to-be University under Government of India',
+                programDuration: '2 years, full-time (MBA in International Business)',
+                entranceExams: 'IIFT entrance exam (now via CAT) and subsequent selection rounds',
+                logoUrl: 'images/iift-delhi-logo.png',
+                flagshipProgramText: 'The flagship MBA (International Business) at IIFT Delhi is focused on preparing students for careers in global trade, export-import management, international marketing, and cross-border finance.',
+                programsText: 'IIFT Delhi offers an MBA in International Business with a curriculum that blends standard management foundations with specialised courses such as international trade operations, currency and commodity derivatives, global supply chain management, and trade policy. Electives allow students to deepen expertise in trade finance, analytics, or functional areas like marketing and operations.',
+                admissionsText: 'Admission to the MBA (IB) program is through the national-level IIFT entrance test or CAT (as notified), followed by group discussions, written tasks, and personal interviews. Academic performance, work experience, and diversity are factored into final selection.',
+                feesRoiText: 'The total fee for the MBA (IB) program is in the ₹20\u201322 lakh range. With recent average CTCs around ₹25\u201327 LPA, IIFT offers competitive ROI for students targeting trade, analytics, consulting, and global corporate roles.',
+                placementsText: 'Recent placement seasons at IIFT have seen strong participation from trading houses, global banks, consultancies, FMCG, and technology firms. Students are placed in roles such as global markets, trade finance, supply chain, consulting, and general management, with average salaries in the mid-₹20 LPA range.',
+                rankingText: 'IIFT is widely regarded as a premier institute for international business, consistently featuring in top-15 B-school rankings in India and enjoying strong recognition among recruiters looking for trade and analytics talent.',
+                campusText: 'The Delhi campus is compact but centrally located, with specialised trade research centres, a rich library, modern classrooms, and hostel facilities. The culture is shaped by student-run committees, international business conclaves, and live projects with export houses and policy bodies.',
+                batchProfileText: 'The MBA (IB) batch at IIFT typically has 250\u2013300 students with backgrounds in engineering, commerce, economics, and sciences. A sizeable proportion of the class brings work experience from IT, analytics, manufacturing, and trade-related roles.',
+                batchDiversity: {
+                    malePercent: '70%',
+                    femalePercent: '30%',
+                    averageAge: '23\u201324 years',
+                    backgroundSplit: [
+                        { domain: 'Engineering/Technology', percent: '≈ 60%' },
+                        { domain: 'Commerce & Management', percent: '≈ 20%' },
+                        { domain: 'Economics/Arts/Humanities', percent: '≈ 15%' },
+                        { domain: 'Others', percent: '≈ 5%' }
+                    ]
+                },
+                topRecruiters: [
+                    'Deloitte',
+                    'EY',
+                    'KPMG',
+                    'HSBC',
+                    'JP Morgan',
+                    'ITC',
+                    'Amazon'
+                ],
+                cutoffs: {
+                    note: 'Indicative MBA (IB) entrance test / CAT percentile ranges for shortlisting.',
+                    rows: [
+                        { exam: 'IIFT / CAT', category: 'General (UR)', range: '95+ percentile (overall)' },
+                        { exam: 'IIFT / CAT', category: 'Reserved categories', range: 'Lower ranges depending on policy' }
+                    ]
+                }
+            },
+            'imi-delhi': {
+                yearEstablished: '1981',
+                instituteType: 'Private institute with corporate sponsorship',
+                programDuration: '2 years, full-time (PGDM)',
+                entranceExams: 'CAT, XAT, GMAT',
+                logoUrl: 'images/imi-delhi-logo.png',
+                programsText: 'IMI New Delhi offers AICTE-approved PGDM programs with strong corporate orientation. The curriculum blends foundational courses in the first year with electives and sectoral offerings in the second year, supported by regular corporate guest lectures and live projects.',
+                admissionsText: 'Admissions to IMI Delhi are based on CAT/XAT/GMAT scores followed by a personal interview and assessment of academic performance, work experience, and profile. Shortlisting cut-offs typically lie in the high 80s to low 90s percentile range depending on the program.',
+                feesRoiText: 'Total fees for the flagship PGDM are typically around ₹19\u201321 lakh. Average CTCs in the mid-teens provide a reasonable ROI for candidates targeting marketing, finance, and analytics roles in Delhi and other metros.',
+                placementsText: 'IMI Delhi reports consistent 100% placements with participation from IT services, consulting, BFSI, FMCG, and analytics firms. Roles span marketing, corporate banking, business analytics, consulting, and product management.',
+                rankingText: 'IMI New Delhi regularly appears in the top-20 B-school lists in India and is recognised for its corporate connect, especially in North India.',
+                campusText: 'Located in central Delhi, the IMI campus offers modern classrooms, a well-equipped library, computer labs, hostels, and numerous student clubs that host guest sessions, conclaves, and cultural events.',
+                batchProfileText: 'The PGDM batch size is around 250\u2013300 students with a mix of fresh graduates and experienced professionals from IT, analytics, finance, and manufacturing backgrounds.',
+                batchDiversity: {
+                    malePercent: '65%',
+                    femalePercent: '35%',
+                    averageAge: '23\u201324 years',
+                    backgroundSplit: [
+                        { domain: 'Engineering/Technology', percent: '≈ 55%' },
+                        { domain: 'Commerce & Management', percent: '≈ 25%' },
+                        { domain: 'Others', percent: '≈ 20%' }
+                    ]
+                },
+                topRecruiters: [
+                    'Deloitte',
+                    'KPMG',
+                    'EY',
+                    'HDFC Bank',
+                    'ICICI Bank',
+                    'Infosys',
+                    'Wipro'
+                ],
+                cutoffs: {
+                    note: 'Indicative CAT/XAT percentile for flagship PGDM shortlisting.',
+                    rows: [
+                        { exam: 'CAT / XAT', category: 'General (UR)', range: '88\u201392 percentile (overall)' }
+                    ]
+                }
+            },
+            'fore-delhi': {
+                yearEstablished: '1981',
+                instituteType: 'Private autonomous institute',
+                programDuration: '2 years, full-time (PGDM)',
+                entranceExams: 'CAT, XAT (primary); some programs accept GMAT',
+                logoUrl: 'images/fore-delhi-logo.png',
+                programsText: 'FORE School of Management offers PGDM programs with strengths in marketing, finance, and analytics. The curriculum emphasises case-based teaching, simulations, and industry projects anchored around its South Delhi location.',
+                admissionsText: 'FORE shortlists candidates using CAT/XAT scores along with past academics, work experience, and profile. Shortlisted candidates appear for personal interviews and other assessment components before final selection.',
+                feesRoiText: 'Total fee levels are typically in the ₹19\u201321 lakh range. With average CTCs in the mid-teens, FORE offers solid outcomes for students targeting marketing, finance, and analytics careers in NCR and beyond.',
+                placementsText: 'Placements at FORE see participation from IT services, consulting, analytics, FMCG, and BFSI firms. Roles range from management trainee and marketing roles to business analyst, risk, and operations profiles.',
+                rankingText: 'FORE is generally ranked among the better private B-schools in Delhi-NCR and is known for its corporate visibility and networking opportunities.',
+                campusText: 'FORE\u2019s campus in South Delhi is compact but modern, with upgraded classrooms, computer labs, a library, and strong student club culture hosting conclaves, fests, and domain events.',
+                batchProfileText: 'Typical batches consist of over 300 students across programs, with representation from engineering, commerce, and arts backgrounds and varying levels of work experience.',
+                batchDiversity: {
+                    malePercent: '60%',
+                    femalePercent: '40%',
+                    averageAge: '23 years',
+                    backgroundSplit: [
+                        { domain: 'Engineering/Technology', percent: '≈ 50%' },
+                        { domain: 'Commerce & Management', percent: '≈ 30%' },
+                        { domain: 'Others', percent: '≈ 20%' }
+                    ]
+                },
+                topRecruiters: [
+                    'Deloitte',
+                    'EY',
+                    'KPMG',
+                    'Genpact',
+                    'HDFC Bank',
+                    'ICICI Prudential',
+                    'Tata group companies'
+                ],
+                cutoffs: {
+                    note: 'Indicative CAT/XAT percentile band for flagship programs.',
+                    rows: [
+                        { exam: 'CAT / XAT', category: 'General (UR)', range: '85\u201389 percentile (overall)' }
+                    ]
+                }
+            }
+        };
+
+        function getQueryParam(key) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(key);
+        }
+
+        function findCollege(stateId, collegeId) {
+            if (typeof topMbaStates === 'undefined') return null;
+            var state = topMbaStates.find(function (s) { return s.id === stateId; });
+            if (!state) return null;
+            var college = state.colleges.find(function (c) { return c.id === collegeId; });
+            if (!college) return null;
+            return { state: state, college: college };
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var stateId = getQueryParam('state');
+            var collegeId = getQueryParam('college');
+            var result = findCollege(stateId, collegeId);
+
+            if (!result) {
+                var heroTitle = document.getElementById('collegeName');
+                var heroText = document.getElementById('collegeTagline');
+                heroTitle.textContent = 'College Not Found';
+                heroText.textContent = 'The requested college profile could not be loaded. Please go back and select a college again.';
+                return;
+            }
+
+            var college = result.college;
+            var state = result.state;
+
+            var heroTitle = document.getElementById('collegeName');
+            var heroText = document.getElementById('collegeTagline');
+            var collegeLogoEl = document.getElementById('collegeLogo');
+            var collegeInitialsEl = document.getElementById('collegeInitials');
+            var collegeVisualNameEl = document.getElementById('collegeVisualName');
+            var collegeVisualSubtitleEl = document.getElementById('collegeVisualSubtitle');
+            var collegeEstablishedEl = document.getElementById('collegeEstablished');
+            var collegeVisualCtcEl = document.getElementById('collegeVisualCtc');
+            var collegeVisualProgramEl = document.getElementById('collegeVisualProgram');
+            var quickFacts = document.getElementById('quickFacts');
+            var flagshipProgram = document.getElementById('flagshipProgram');
+            var highlightsList = document.getElementById('highlightsList');
+            var programStructureList = document.getElementById('programStructureList');
+            var specialisationsList = document.getElementById('specialisationsList');
+            var programsText = document.getElementById('programsText');
+            var coreCoursesList = document.getElementById('coreCoursesList');
+            var pedagogyList = document.getElementById('pedagogyList');
+            var experientialList = document.getElementById('experientialList');
+            var batchProfileText = document.getElementById('batchProfileText');
+            var batchDiversityContainer = document.getElementById('batchDiversityContainer');
+            var admissionsText = document.getElementById('admissionsText');
+            var feesRoiText = document.getElementById('feesRoiText');
+            var placementsText = document.getElementById('placementsText');
+            var rankingText = document.getElementById('rankingText');
+            var campusText = document.getElementById('campusText');
+            var cutoffTableBody = document.getElementById('cutoffTableBody');
+            var profile = extendedProfiles[college.id] || {};
+
+            heroTitle.textContent = college.name;
+            heroText.textContent = 'Top MBA college in ' + state.name + ' with a strong record in placements and academic rigor.';
+
+            var initials = college.name.split(' ')
+                .filter(function (word) { return word && word[0].match(/[A-Za-z]/); })
+                .slice(0, 3)
+                .map(function (word) { return word[0].toUpperCase(); })
+                .join('');
+
+            var logoUrl = profile.logoUrl;
+
+            collegeInitialsEl.textContent = initials || 'MBA';
+
+            if (logoUrl) {
+                collegeLogoEl.onerror = function () {
+                    collegeLogoEl.style.display = 'none';
+                    collegeInitialsEl.style.display = 'flex';
+                };
+                collegeLogoEl.src = logoUrl;
+                collegeLogoEl.style.display = 'block';
+                collegeInitialsEl.style.display = 'none';
+            } else {
+                collegeLogoEl.removeAttribute('src');
+                collegeLogoEl.style.display = 'none';
+                collegeInitialsEl.style.display = 'flex';
+            }
+
+            collegeVisualNameEl.textContent = college.name;
+            collegeVisualSubtitleEl.textContent = college.city + ' • ' + state.name;
+            collegeEstablishedEl.textContent = profile.yearEstablished || 'NA';
+            collegeVisualCtcEl.textContent = college.avgCtc || 'NA';
+            collegeVisualProgramEl.textContent = college.flagshipProgram || 'MBA';
+
+            quickFacts.innerHTML = '';
+
+            var facts = [
+                { label: 'Location', value: college.city + ', ' + state.name },
+                { label: 'Flagship Program', value: college.flagshipProgram },
+                { label: 'Average CTC (Recent Batches)', value: college.avgCtc },
+                { label: 'Approximate Fees', value: college.fees },
+                { label: 'Typical Batch Size', value: college.batchSize }
+            ];
+
+            if (profile.yearEstablished) {
+                facts.push({ label: 'Year of Establishment', value: profile.yearEstablished });
+            }
+
+            if (profile.instituteType) {
+                facts.push({ label: 'Institute Type', value: profile.instituteType });
+            }
+
+            if (profile.programDuration) {
+                facts.push({ label: 'Program Duration', value: profile.programDuration });
+            }
+
+            if (profile.entranceExams) {
+                facts.push({ label: 'Entrance Exams Accepted', value: profile.entranceExams });
+            }
+
+            facts.forEach(function (fact) {
+                var item = document.createElement('div');
+                item.className = 'detail-item';
+
+                var dl = document.createElement('div');
+                dl.className = 'detail-label';
+                dl.textContent = fact.label;
+                item.appendChild(dl);
+
+                var dv = document.createElement('div');
+                dv.className = 'detail-value';
+                dv.textContent = fact.value;
+                item.appendChild(dv);
+
+                quickFacts.appendChild(item);
+            });
+
+            var flagshipDescription = profile.flagshipProgramText || (college.flagshipProgram + ' is a two-year full-time residential program that combines core management fundamentals with electives in areas such as marketing, finance, operations, analytics, and strategy. It emphasises case-based learning, live projects, and an industry internship to help students build practical management skills.');
+
+            flagshipProgram.textContent = flagshipDescription;
+
+            highlightsList.innerHTML = '';
+            college.highlights.forEach(function (point) {
+                var li = document.createElement('li');
+                li.textContent = point;
+                highlightsList.appendChild(li);
+            });
+
+            programStructureList.innerHTML = '';
+            specialisationsList.innerHTML = '';
+
+            var defaultProgramStructure = [
+                'Year 1 builds foundations across all core management disciplines.',
+                'Summer internship of 8–10 weeks exposes students to real corporate projects.',
+                'Year 2 offers electives that allow students to specialise in chosen domains.'
+            ];
+
+            var defaultSpecialisations = [
+                'Marketing and sales roles',
+                'Corporate and retail banking, financial services',
+                'Consulting and strategy profiles',
+                'Operations, supply chain, and manufacturing roles',
+                'Analytics, product, and technology management roles'
+            ];
+
+            var structureItems = profile.programStructure || defaultProgramStructure;
+            structureItems.forEach(function (item) {
+                var liStruct = document.createElement('li');
+                liStruct.textContent = item;
+                programStructureList.appendChild(liStruct);
+            });
+
+            var specialisationItems = profile.keySpecialisations || defaultSpecialisations;
+            specialisationItems.forEach(function (item) {
+                var liSpec = document.createElement('li');
+                liSpec.textContent = item;
+                specialisationsList.appendChild(liSpec);
+            });
+
+            var defaultPrograms = 'The flagship program typically spans two academic years with a mix of core management courses and electives in areas such as marketing, finance, operations, analytics, and strategy. Students are exposed to case-based learning, live projects, internships, and industry sessions to help them build practical problem-solving skills.';
+            var defaultBatchProfile = college.batchProfile + ' Batch composition usually includes graduates from engineering, commerce, science, and arts, with candidates bringing varied work experience from IT services, consulting, manufacturing, start-ups, and public sector organisations.';
+            var defaultAdmissions = 'Admission to the flagship MBA program is usually based on a national-level entrance test followed by institute-specific shortlisting criteria, personal interviews, and evaluation of academic background and work experience.';
+            var defaultFeesRoi = 'Program fees and average placement packages together determine the overall ROI. Candidates should compare total academic fees with recent placement reports before finalising preferences.';
+            var defaultPlacements = 'Recent batches have seen recruiters from consulting, IT services, BFSI, manufacturing, and consumer sectors, offering roles across marketing, finance, operations, analytics, and general management.';
+            var defaultRanking = 'The institute is well-regarded among management aspirants and appears in multiple national B-school rankings each year. Rankings can vary by methodology but generally place it among established MBA options in its region.';
+            var defaultCampus = 'The campus typically offers classrooms, seminar halls, libraries, computer labs, and access to clubs and committees that organise events, competitions, and industry interactions throughout the year.';
+            var defaultCoreCourses = [
+                'Foundation courses in accounting, finance, marketing, organisational behaviour, and operations.',
+                'Quantitative techniques, statistics, and economics for managers.',
+                'Business communication, ethics, and introductory strategy.'
+            ];
+            var defaultPedagogy = [
+                'Mix of lectures, case discussions, and class presentations.',
+                'Regular quizzes and assignments spread across the term.',
+                'Comprehensive exams at the end of each term.'
+            ];
+            var defaultExperiential = [
+                'Summer internship between the first and second year.',
+                'Live projects and case competitions with corporate partners.',
+                'Workshops and industry talks organised by student clubs.'
+            ];
+            var defaultCutoffs = {
+                note: 'Cut-off information for this college has not been added in detail yet. Refer to the official notification for the latest exam and category-wise cut-offs.',
+                rows: [
+                    { exam: 'CAT / XAT / other', category: 'All categories', range: 'Cut-off varies by program and year' }
+                ]
+            };
+
+            var coreItems = profile.curriculumCore || defaultCoreCourses;
+            var pedagogyItems = profile.curriculumPedagogy || defaultPedagogy;
+            var experientialItems = profile.curriculumExperiential || defaultExperiential;
+
+            coreCoursesList.innerHTML = '';
+            coreItems.forEach(function (item) {
+                var liCore = document.createElement('li');
+                liCore.textContent = item;
+                coreCoursesList.appendChild(liCore);
+            });
+
+            pedagogyList.innerHTML = '';
+            pedagogyItems.forEach(function (item) {
+                var liPed = document.createElement('li');
+                liPed.textContent = item;
+                pedagogyList.appendChild(liPed);
+            });
+
+            experientialList.innerHTML = '';
+            experientialItems.forEach(function (item) {
+                var liExp = document.createElement('li');
+                liExp.textContent = item;
+                experientialList.appendChild(liExp);
+            });
+
+            programsText.textContent = profile.programsText || defaultPrograms;
+            batchProfileText.textContent = profile.batchProfileText || defaultBatchProfile;
+
+            batchDiversityContainer.innerHTML = '';
+
+            if (profile.batchDiversity || profile.topRecruiters) {
+                if (profile.batchDiversity) {
+                    var diversityTitle = document.createElement('h3');
+                    diversityTitle.textContent = 'Batch Diversity (recent MBA batch)';
+                    diversityTitle.style.marginTop = '1.25rem';
+                    diversityTitle.style.marginBottom = '0.5rem';
+                    batchDiversityContainer.appendChild(diversityTitle);
+
+                    var genderPara = document.createElement('p');
+                    genderPara.textContent = 'Gender mix: ' + profile.batchDiversity.malePercent + ' male, ' + profile.batchDiversity.femalePercent + ' female; average age ' + profile.batchDiversity.averageAge + '.';
+                    batchDiversityContainer.appendChild(genderPara);
+
+                    if (profile.batchDiversity.backgroundSplit && profile.batchDiversity.backgroundSplit.length) {
+                        var backgroundTitle = document.createElement('p');
+                        backgroundTitle.textContent = 'Academic and professional backgrounds (by domain):';
+                        backgroundTitle.style.marginTop = '0.75rem';
+                        batchDiversityContainer.appendChild(backgroundTitle);
+
+                        var backgroundList = document.createElement('ul');
+                        profile.batchDiversity.backgroundSplit.forEach(function (item) {
+                            var li = document.createElement('li');
+                            li.textContent = item.domain + ': ' + item.percent;
+                            backgroundList.appendChild(li);
+                        });
+                        batchDiversityContainer.appendChild(backgroundList);
+                    }
+
+                    if (profile.batchDiversity.experienceSplit && profile.batchDiversity.experienceSplit.length) {
+                        var experienceTitle = document.createElement('p');
+                        experienceTitle.textContent = 'Work experience distribution:';
+                        experienceTitle.style.marginTop = '0.75rem';
+                        batchDiversityContainer.appendChild(experienceTitle);
+
+                        var experienceList = document.createElement('ul');
+                        profile.batchDiversity.experienceSplit.forEach(function (item) {
+                            var liExpBand = document.createElement('li');
+                            liExpBand.textContent = item.band + ': ' + item.percent;
+                            experienceList.appendChild(liExpBand);
+                        });
+                        batchDiversityContainer.appendChild(experienceList);
+                    }
+
+                    if (profile.batchDiversity.regionSplit && profile.batchDiversity.regionSplit.length) {
+                        var regionTitle = document.createElement('p');
+                        regionTitle.textContent = 'Home state and region mix:';
+                        regionTitle.style.marginTop = '0.75rem';
+                        batchDiversityContainer.appendChild(regionTitle);
+
+                        var regionList = document.createElement('ul');
+                        profile.batchDiversity.regionSplit.forEach(function (item) {
+                            var liRegion = document.createElement('li');
+                            liRegion.textContent = item.region + ': ' + item.percent;
+                            regionList.appendChild(liRegion);
+                        });
+                        batchDiversityContainer.appendChild(regionList);
+                    }
+                }
+
+                if (profile.topRecruiters && profile.topRecruiters.length) {
+                    var recruitersTitle = document.createElement('h3');
+                    recruitersTitle.textContent = 'Top Recruiters (recent batches)';
+                    recruitersTitle.style.marginTop = '1.5rem';
+                    recruitersTitle.style.marginBottom = '0.5rem';
+                    batchDiversityContainer.appendChild(recruitersTitle);
+
+                    var recruitersList = document.createElement('ul');
+                    profile.topRecruiters.forEach(function (name) {
+                        var liRec = document.createElement('li');
+                        liRec.textContent = name;
+                        recruitersList.appendChild(liRec);
+                    });
+                    batchDiversityContainer.appendChild(recruitersList);
+                }
+            }
+            admissionsText.textContent = profile.admissionsText || defaultAdmissions;
+            feesRoiText.textContent = profile.feesRoiText || defaultFeesRoi;
+            placementsText.textContent = profile.placementsText || defaultPlacements;
+            rankingText.textContent = profile.rankingText || defaultRanking;
+            campusText.textContent = profile.campusText || defaultCampus;
+
+            var cutoffs = profile.cutoffs || defaultCutoffs;
+            cutoffTableBody.innerHTML = '';
+            cutoffs.rows.forEach(function (row) {
+                var tr = document.createElement('tr');
+
+                var examTd = document.createElement('td');
+                examTd.textContent = row.exam;
+                tr.appendChild(examTd);
+
+                var catTd = document.createElement('td');
+                catTd.textContent = row.category;
+                tr.appendChild(catTd);
+
+                var rangeTd = document.createElement('td');
+                rangeTd.textContent = row.range;
+                tr.appendChild(rangeTd);
+
+                cutoffTableBody.appendChild(tr);
+            });
+        });
+    </script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

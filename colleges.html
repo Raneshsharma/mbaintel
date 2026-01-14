@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges - MBAIntel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MBAIntel</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="colleges.html">Colleges</a></li>
+                <li><a href="compare.html">Compare Colleges</a></li>
+                <li><a href="roi-careers.html">ROI Calculator</a></li>
+                <li><a href="chatbot.html">AI Assistant</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Page Hero -->
+        <div class="page-hero">
+            <h1>MBA Colleges Database</h1>
+            <p>Filter and explore 200+ MBA colleges based on your preferences. Find the perfect match for your career goals with data-driven insights.</p>
+        </div>
+
+        <section class="section">
+            <!-- Filters -->
+            <div class="filters">
+                <div class="form-group">
+                    <label for="tierFilter">Tier</label>
+                    <select id="tierFilter" class="form-control">
+                        <option value="">All Tiers</option>
+                        <option value="1">Tier I</option>
+                        <option value="2">Tier II</option>
+                        <option value="3">Tier III</option>
+                        <option value="4">Tier IV</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="examFilter">Entrance Exam</label>
+                    <select id="examFilter" class="form-control">
+                        <option value="">All Exams</option>
+                        <option value="CAT">CAT</option>
+                        <option value="XAT">XAT</option>
+                        <option value="GMAT">GMAT</option>
+                        <option value="CMAT">CMAT</option>
+                        <option value="NMAT">NMAT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="locationFilter">Location</label>
+                    <select id="locationFilter" class="form-control">
+                        <option value="">All Locations</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="feesMin">Min Fees (₹)</label>
+                    <input type="number" id="feesMin" class="form-control" placeholder="Min">
+                </div>
+
+                <div class="form-group">
+                    <label for="feesMax">Max Fees (₹)</label>
+                    <input type="number" id="feesMax" class="form-control" placeholder="Max">
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div style="margin-bottom: 1rem;">
+                <p id="resultsCount"><strong>Loading...</strong></p>
+            </div>
+
+            <!-- College List -->
+            <div id="collegeList" class="college-list">
+                <!-- Colleges will be dynamically loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/colleges.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
